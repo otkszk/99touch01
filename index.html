@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九九（くく）マスター</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>九九（くく）マスター</h1>
+        </header>
+
+        <section id="menu-screen">
+            <div class="menu-group">
+                <label>なんの だん？</label>
+                <select id="select-dan">
+                    <option value="1">1の だん</option>
+                    <option value="2" selected>2の だん</option>
+                    <option value="3">3の だん</option>
+                    <option value="4">4の だん</option>
+                    <option value="5">5の だん</option>
+                    <option value="6">6の だん</option>
+                    <option value="7">7の だん</option>
+                    <option value="8">8の だん</option>
+                    <option value="9">9の だん</option>
+                </select>
+            </div>
+
+            <div class="menu-group">
+                <label>じゅんばん</label>
+                <select id="select-order">
+                    <option value="asc">じゅんばん (あがる)</option>
+                    <option value="desc">ぎゃく (さがる)</option>
+                    <option value="random">バラバラ</option>
+                </select>
+            </div>
+
+            <div class="menu-group">
+                <label>むずかしさ</label>
+                <select id="select-difficulty">
+                    <option value="easy">かんたん (むげん)</option>
+                    <option value="normal" selected>ふつう (3かい)</option>
+                    <option value="hard">むずかしい (1かい)</option>
+                </select>
+            </div>
+
+            <button id="btn-start" class="btn-primary">スタート！</button>
+        </section>
+
+        <section id="game-screen" class="hidden">
+            <div class="status-bar">
+                <div id="lives-display">❤️ x 3</div>
+                <div id="progress-display">のこり: 9もん</div>
+            </div>
+
+            <div class="question-area">
+                <div id="question-text">もんだい</div>
+            </div>
+
+            <div id="answer-grid" class="grid-container">
+                </div>
+        </section>
+
+        <section id="result-screen" class="hidden">
+            <h2 id="result-title">クリア！</h2>
+            <p id="result-message">よくがんばりました！</p>
+            <button id="btn-restart" class="btn-primary">もういちど</button>
+            <button id="btn-home" class="btn-secondary">メニューへ</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
